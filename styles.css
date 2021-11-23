@@ -1,0 +1,131 @@
+/* global */
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* primary */
+    --soft-blue: hsl(215, 51%, 70%);
+    --cyan: hsl(178, 100%, 50%);
+
+    /* neutral */
+    --body-background: hsl(217, 54%, 11%);
+    --card-background: hsl(216, 50%, 16%);
+    --line-color: hsl(215, 32%, 27%);
+    --white: hsl(0, 0%, 100%);
+}
+
+html {
+    font-size: 18px;
+}
+
+body {
+    background-color: var(--body-background);
+    font-family: 'Outfit', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* card */
+
+.card,
+.poster {
+    border-radius: 10px;
+}
+
+.card {
+    width: 350px;
+    max-width: 90%;
+    min-width: 250px;
+    background-color: var(--card-background);
+    padding: 25px;
+    margin: 0 25px;
+}
+
+.poster {
+    width: 100%;
+}
+
+h1:hover,
+.creator span:hover {
+    cursor: pointer;
+    color: var(--cyan);
+}
+
+h1 {
+    color: var(--white);
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin: 20px 0;
+}
+
+p {
+    color: var(--soft-blue);
+    font-weight: 300;
+    font-size: 1rem;
+    margin: 10px 0;
+}
+
+.tags {
+    display: flex;
+    justify-content: space-between;
+}
+
+.currency-tag {
+    color: var(--cyan);
+    font-weight: 400;
+}
+
+.currency-tag::before {
+    content: url(./images/icon-ethereum.svg);
+    position: relative;
+    top: 2px;
+    margin-right: 5px;
+}
+
+.time-tag {
+    color: var(--soft-blue);
+}
+
+.time-tag::before {
+    content: url(./images/icon-clock.svg);
+    position: relative;
+    top: 2px;
+    margin-right: 5px;
+}
+
+hr {
+    border-width: 1px 0 0 0;
+    border-color: var(--soft-blue);
+    margin: 15px 0;
+}
+
+.creator {
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+}
+
+.creator > img {
+    width: 30px;
+    height: 30px;
+    margin-right: 15px;
+    border-color: var(--white);
+    border-width: 2px;
+}
+
+.creator span {
+    margin-left: 0.5ch;
+    color: var(--white);
+}
+
+/* media queries */
+
+@media only screen and (max-width: 350px) {
+    html {
+        font-size: 14px;
+    }
+}
